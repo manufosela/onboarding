@@ -1,0 +1,253 @@
+:root {
+  --primary-100:hsl(186.67, 53.78%, 49.22%);  /* #3ab2c1 */
+  --primary-200:hsl(187.00, 90.91%, 25.88%);  /* #06707e */
+  --primary-300:hsl(240.00, 0.78%, 25.29%);   /* #404041 */
+
+  --secondary-100:hsl(12.15, 38.92%, 60.20%); /* #c18272 */
+  --secondary-200:hsl(21.78, 82.02%, 65.10%); /* #ef925d */
+  --secondary-300:hsl(45.00, 50.00%, 96.86%); /* #fbf9f3 */
+
+  --neutro-100: hsl(30.00, 2.13%, 81.57%);  /* #d1d0cf */
+  --neutro-200: hsl(45.00, 50.00%, 96.86%); /* #fbf9f3 */
+
+  --primary-font-family: 'Neuton Regular', sans-serif;
+  --primary-light-font-family: 'Neuton Extra Light', sans-serif;
+  --secundary-font-family: 'Helvetica Neue Regular', sans-serif;
+  --tertiary-font-family: 'Myrian Pro Regular', sans-serif;
+
+  --r-main-color: var(--neutro-100);
+  --r-heading-color: var(--neutro-100);
+  --r-link-color: var(--primary-300);
+  --r-heading-color-strong: var(--primary-200);
+  --leanmind-color: var(--primary-100);
+} 
+
+.hidden {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Neuton Regular, sans-serif;
+}
+
+body {
+  background-color: #000000;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcome {
+  background-color: var(--primary-200);
+  display: flex;
+  flex-direction: column;
+}
+
+img.bienvenido {
+  width: 430px;
+  margin-top: 7rem;
+}
+
+h1.bienvenido {
+  color: var(--secondary-100);
+  font-size: 8rem;
+  z-index:10;
+  position:relative;
+  top:15rem;
+  text-shadow: 3px 3px 3px var(--primary-200);
+}
+img.tenerifelm {
+  position: relative;
+  bottom: 7rem;
+}
+firebase-loginbutton {
+  position:fixed;
+  top:0.5rem;
+  right:0.5rem;
+  --firebase-loginbutton_btn-background-color: var(--primary-300);
+  --firebase-loginbutton_btn-primary-color: var(--primary-100);
+}
+area.logoLM {
+  position: fixed;
+  top: 0;
+  left:0;
+  width:200px;
+  height: 150px;
+}
+.asideTitles {
+  position: fixed;
+  top: 150px;
+  left:1rem;
+  background-color: var(--primary-300);
+  color: var(--primary-100);
+  z-index:10;
+  width:20vw;
+  max-width: 15rem;
+}
+
+.asideTitles summary {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--neutro-200);
+  padding:0.5rem;
+}
+.asideTitles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.asideTitles ul li {
+  padding: 0.5rem;
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.asideTitles a {
+  text-decoration: none;
+  color: var(--primary-100);
+}
+.asideTitles a:hover {
+  color: var(--primary-200);
+}
+
+.image-crop {
+  width: 350px;      /* Ancho del área de visualización de la imagen */
+  height: 350px;     /* Altura del área de visualización de la imagen */
+  overflow: hidden;  /* Asegura que solo se muestre el área dentro del contenedor */
+  position: relative;
+  background-image: url('/assets/images/tenerife-lean-mind.png'); /* URL de la imagen */
+  background-size: cover;    /* Ajusta la imagen al contenedor */
+  background-position: bottom; /* Ajusta qué parte de la imagen se muestra */
+  margin: 0 auto;
+}
+
+.eqapoyo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 7rem auto;
+  width: 100%;
+}
+
+.eqapoyo .members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 2fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+    
+.member { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.datos { display: flex; flex-direction: column; justify-content: start; align-items: center; }
+.member1 { grid-area: 1 / 1 / 2 / 2; }
+.member2 { grid-area: 1 / 2 / 2 / 3; }
+.member3 { grid-area: 1 / 3 / 2 / 4; }
+.member4 { grid-area: 1 / 4 / 2 / 5; }
+.datosmember5 { grid-area: 2 / 1 / 3 / 2; }
+.datosmember6 { grid-area: 2 / 2 / 3 / 3; }
+.datosmember7 { grid-area: 2 / 3 / 3 / 4; }
+.datosmember8 { grid-area: 2 / 4 / 3 / 5; }
+
+.name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--r-heading-color-strong);
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 2px #000000; 
+}
+.complete-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--r-heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.rol {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+
+}
+
+.eqapoyo div img {
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.plusSign {
+  font-size:2rem;
+  color: white;
+  background: blue;
+  width:3rem;
+  height:3rem;
+  padding:0.25rem;
+  margin:0;
+  display:inline-block
+}
+
+.progress {
+  height: 12px!important;
+}
+
+.camera {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 240px;
+  border:1px solid red;
+  z-index:1000;
+  display: none;
+}
+
+.destacado {
+  color: var(--primary-400);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.destacado2 {
+  color: var(--primary-100);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nota {
+  color: var(--primary-300);
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+}
